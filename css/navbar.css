@@ -6,7 +6,6 @@
     position: fixed;
     width: 100%;
     z-index: 999;
-    overflow: hidden;
 }
 
 .navbar-bars {
@@ -144,12 +143,16 @@
 }
 
 @media (max-width: 960px) {
+    .navbar-dropdown {
+        display: none;
+    }
     .navbar-name {
         font-size: 30px;
         width: 100%;
     }
     .navbar {
         height: 60px;
+        overflow: hidden;
     }
     .navbar-links {
         flex-direction: column;
