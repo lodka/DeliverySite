@@ -1,3 +1,5 @@
+var address='http://127.0.0.1:5500/';
+var path = '';
 //sugar
 $ = function(query) {
     if (query[0] == '.') return document.getElementsByClassName(query.slice(1));
@@ -12,9 +14,10 @@ function elem(element, cls, id) {
     return temp;
 }
 //logic
+//loads part of the site from txt template
 function loadPart(filename, reloadEvents) {
     xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", 'http://127.0.0.1:5500/project/Site/' + filename + ".txt", true);
+    xmlhttp.open("GET", address+path+'Site/' + filename + ".txt", true);
     xmlhttp.send();
     let response;
     xmlhttp.onreadystatechange = function() {
@@ -36,11 +39,11 @@ function loadPart(filename, reloadEvents) {
     }
 }
 
-
+//loads data from JSON
 function loadData(subject, callback) {
     if (subject && subject != "" && !(subject instanceof Array && subject[0] == "")) {
         xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", 'http://127.0.0.1:5500/project/Site/data.json', true);
+        xmlhttp.open("GET", address+path+'Site/data.json', true);
         xmlhttp.send();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
@@ -52,18 +55,16 @@ function loadData(subject, callback) {
 }
 
 function loadHome(response, data) {
-    let top = findTop(7, data);
+    let top = findTop(5, data);
     response = replaceTop(response, top);
     $('.body-wrap')[0].innerHTML = response;
 }
-var a;
-
+//generates menu "cards" from JSON data
 function loadMenu(categorie, data) {
     menuFlag ? $('#cuisine-content').innerHTML = "" : loadPart('menu', true), menuFlag = true;
     setTimeout(function() {
         if (categorie && data) {
             data = data[categorie];
-            a = data;
             if (sessionStorage.sortType == 'price') {
                 sessionStorage.sortDirection == 'down' ?
                     data.sort(function(a, b) { return a.price - b.price; }) :
@@ -140,7 +141,7 @@ function removeOrderCard(id) {
 
 function addOrderCard(idAndCount, data) {
     let orders = JSON.parse(localStorage.orders);
-    let propagationFlag = true;
+    let propagationFlag = true;//flag for optimization reasons
     if (localStorage.orders != "[]") {
         orders.forEach(function(element) {
             if (element.name == idAndCount[0]) {
@@ -177,7 +178,7 @@ function addOrderCard(idAndCount, data) {
     }
     updateOrders();
 }
-
+//updates Orders section 
 function updateOrders() {
     $('#orders-items').innerHTML = '';
     if (localStorage.orders != "[]") {
@@ -216,7 +217,7 @@ function updateOrders() {
     }
     loadEvents('order');
 }
-
+//generation of order "Card"
 function makeOrderCard(data) {
     let item = elem('div', 'order-item', data.name);
     let desc = elem('div', 'order-desc');
@@ -236,7 +237,7 @@ function makeOrderCard(data) {
     item.appendChild(close);
     return item;
 }
-
+//Shows detailed info about product
 function loadDesc(id, data) {
     let categories = (sessionStorage.categorie) ? [sessionStorage.categorie] : ['ukrainian', 'asian', 'european', 'american'];
     let propagationFlag = false;
@@ -265,9 +266,8 @@ function loadDesc(id, data) {
     $('.item-description')[0].lastElementChild.children[1].children[1].value = 1;
     $('.item-description-wrap')[0].style.display = 'flex';
 }
-
+//for Clients Choice part
 function findTop(count, data) {
-
     let categories = ['ukrainian', 'asian', 'european', 'american'];
     let top = []
     for (let i = 0; i < count; ++i) {
@@ -289,7 +289,7 @@ function findTop(count, data) {
     }
     return top;
 }
-
+//pseudo backend logic
 function replaceTop(response, top) {
     try {
         for (let i = 0; i < top.length; ++i) {
@@ -305,17 +305,7 @@ function replaceTop(response, top) {
         return response;
     }
 }
-
-function getName() {
-    let str = ''
-    decodeURIComponent(document.cookie)
-        .slice(decodeURIComponent(document.cookie)
-            .indexOf('login=') + 6)
-        .split(' ')
-        .forEach(function(word) { str += word[0]; });
-    return str;
-}
-
+//google maps
 function initMap() {
     var spot1 = {
         lat: 50.371098,
@@ -351,7 +341,7 @@ function initMap() {
         map: map
     });
 }
-
+//big function which reloads all events(my SPA relization needs to update events after every page rerender)
 function loadEvents(groups) {
     switch (groups) {
         case 'main':
