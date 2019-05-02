@@ -1,5 +1,5 @@
-var address='http://127.0.0.1:5500/';
-var path = '';
+var address = 'http://127.0.0.1:5500/';
+var path = 'DeliverySite-master/';
 //sugar
 $ = function(query) {
     if (query[0] == '.') return document.getElementsByClassName(query.slice(1));
@@ -17,7 +17,7 @@ function elem(element, cls, id) {
 //loads part of the site from txt template
 function loadPart(filename, reloadEvents) {
     xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", address+path+'Site/' + filename + ".txt", true);
+    xmlhttp.open("GET", address + path + filename + ".txt", true);
     xmlhttp.send();
     let response;
     xmlhttp.onreadystatechange = function() {
@@ -43,7 +43,7 @@ function loadPart(filename, reloadEvents) {
 function loadData(subject, callback) {
     if (subject && subject != "" && !(subject instanceof Array && subject[0] == "")) {
         xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", address+path+'Site/data.json', true);
+        xmlhttp.open("GET", address + path + 'data.json', true);
         xmlhttp.send();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
@@ -141,7 +141,7 @@ function removeOrderCard(id) {
 
 function addOrderCard(idAndCount, data) {
     let orders = JSON.parse(localStorage.orders);
-    let propagationFlag = true;//flag for optimization reasons
+    let propagationFlag = true; //flag for optimization reasons
     if (localStorage.orders != "[]") {
         orders.forEach(function(element) {
             if (element.name == idAndCount[0]) {
