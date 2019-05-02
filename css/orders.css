@@ -1,0 +1,177 @@
+.body-orders {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+#basket-button:before {
+    content: "f";
+}
+
+.orders-count {
+    padding: 2px;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: rgb(188, 8, 8);
+    color: white;
+    border-radius: 50%;
+    bottom: -5px;
+    right: -5px;
+    display: none;
+}
+
+#basket-button {
+    position: fixed;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    top: 40%;
+    left: -25px;
+    z-index: 699;
+    overflow: visible;
+    border: 2px solid black;
+}
+
+.body-orders {
+    position: fixed;
+    border-right: 1px solid #eeeeee;
+    background-color: #dedede;
+    padding: 30px;
+    overflow-y: scroll;
+    z-index: 700;
+    height: calc(100% - 120px);
+    left: -360px;
+    top: 60px;
+    border-right: 1px solid black;
+}
+
+.orders-wrap {
+    position: relative;
+    z-index: 701;
+    min-height: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.order {
+    display: flex;
+    width: 100%;
+    margin: 20px;
+}
+
+.order-body {
+    text-align: center;
+    width: 100px;
+}
+
+.order-name {
+    margin: 0;
+}
+
+.order-item-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.646);
+    border-bottom-left-radius: 5px;
+}
+
+.orders-submit-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.orders-phone-number {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.orders-submit {
+    width: 100px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.orders-submit:hover {
+    cursor: pointer;
+}
+
+.order-item-close:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.order-image {
+    height: 60px;
+    width: 60px;
+}
+
+.order-item {
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-desc {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 999;
+}
+
+.order-img>img {
+    z-index: 998;
+}
+
+@media (max-width: 950px) {
+    .body-orders {
+        top: 40px;
+        height: calc(100% - 100px);
+    }
+}
+
+@media (max-width: 400px) {
+    .body-orders {
+        width: 200px;
+    }
+    #basket-button {
+        height: 50px;
+        width: 33px;
+        font-size: 14px;
+        left: -16px;
+        border-radius: 5px;
+    }
+    .order-image {
+        height: 40px;
+        width: 40px;
+    }
+    .orders-count {
+        padding: 2px;
+        height: 17px;
+        width: 17px;
+    }
+    #basket-button:before {
+        content: "";
+    }
+    .orders-phone-number {
+        width: 80%;
+    }
+}

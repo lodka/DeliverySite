@@ -1,0 +1,122 @@
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.bold {
+    font-weight: bold;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h2 {
+    padding: 10px;
+}
+
+img {
+    background: gray;
+    height: 100%;
+    width: auto;
+}
+
+.vertical {
+    height: auto;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.img-wrap {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+nav {
+    width: 100%;
+}
+
+hr {
+    width: 60%;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+.white {
+    color: white;
+}
+
+.body-wrap {
+    min-height: calc(100% - 82px);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    top: 60px;
+}
+
+.body-market-wrap {
+    height: 100%;
+    width: 100%;
+}
+
+.price {
+    background: white;
+    border: 1px solid black;
+    padding: 2px 0;
+    width: 50%;
+}
+
+.carousel-4,
+.carousel-3,
+.carousel-2,
+.carousel-1,
+.orders-count,
+#basket-button,
+.body-orders,
+.cuisine-item:hover>.cuisine-item-name,
+.cuisine-item-name,
+.navbar-dropdown,
+.border-bottom,
+.cuisine-content-item,
+.cuisine-cart,
+.cuisine-price,
+.order-item-close,
+.navbar {
+    transition: ease-out 0.2s;
+}

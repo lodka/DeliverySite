@@ -1,0 +1,268 @@
+.cuisine-wrap {
+    padding: 20px 80px;
+}
+
+.cuisine {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cuisine-item {
+    margin: 10px;
+    width: 220px;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cuisine-item:hover>.cuisine-item-name {
+    top: 0;
+}
+
+.cuisine-item img {
+    border-radius: 0;
+}
+
+.cuisine-item-name {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 180px;
+    background-color: rgba(35, 35, 35, 0.62);
+    color: white;
+}
+
+#cuisine-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cuisine-content-wrap {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cuisine-content-item:nth-child(odd) {
+    justify-self: left;
+}
+
+.cuisine-content-item {
+    margin: 20px 0;
+    height: 150px;
+    width: 450px;
+    display: flex;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+.content-item-img {
+    width: 150px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cuisine-price-cart {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 4.5%;
+    bottom: 10px;
+    height: 22px;
+    width: 273px;
+}
+
+.cuisine-price,
+.cuisine-cart {
+    width: 90px;
+}
+
+.cuisine-price {
+    padding: 2px;
+}
+
+.cart {
+    margin: 10px;
+}
+
+.cuisine-price {
+    border: 1px solid black;
+    border-right: none;
+}
+
+.cuisine-count {
+    border: 1px solid black;
+    width: 90px;
+    display: flex;
+}
+
+.cuisine-count-input {
+    text-align: center;
+    width: 50px;
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.plus,
+.minus {
+    width: 20px;
+}
+
+.cuisine-cart {
+    border: 1px solid black;
+    border-left: none;
+    cursor: pointer;
+    background: none;
+}
+
+.cuisine-price-cart:hover>.cuisine-cart {
+    border-radius: 0 10px 10px 0;
+    background: #dedede;
+}
+
+.cuisine-price-cart:hover>.cuisine-price {
+    border-radius: 10px 0 0 10px;
+    background: #dedede;
+}
+
+.content-item-text {
+    width: 300px;
+    position: relative;
+}
+
+.content-item-text p {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.cuisine-content-item:hover {
+    background: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+.sort {
+    display: flex;
+    justify-content: center;
+}
+
+.sort-element {
+    padding: 2px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 960px) {
+    .cuisine-wrap {
+        padding: 20px;
+    }
+    .cuisine-item {
+        margin: 10px;
+        width: 120px;
+        height: 120px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .cuisine-item-name {
+        padding: 5px 0;
+        top: 90px;
+        font-size: 13px;
+    }
+    .cuisine-item:hover>.cuisine-item-name {
+        top: 90px;
+    }
+}
+
+.item-description .cuisine-price-cart {
+    position: relative;
+}
+
+@media (max-width: 910px) {
+    .cuisine-content-wrap {
+        max-width: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 910px) {
+    .cuisine-content-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .cuisine-content-item {
+        margin: 10px 0;
+        height: 106px;
+        width: 320px;
+    }
+    .cuisine-item {
+        width: 110px;
+        height: 110px;
+    }
+    .content-item-text {
+        width: 213px;
+        font-size: 10px;
+    }
+    .content-item-img {
+        width: 106px;
+    }
+    .cuisine-price,
+    .cuisine-cart {
+        width: 64px;
+    }
+    .cuisine-price-cart {
+        height: 16px;
+        bottom: 2px;
+        width: 194px;
+    }
+    .cuisine-count-input {
+        width: 36px;
+    }
+    .cuisine-price {
+        font-size: 12px;
+    }
+    .cuisine-cart {
+        font-size: 11px;
+    }
+    .item-description .cuisine-price-cart {
+        bottom: 10px;
+        height: 22px;
+        width: 273px;
+    }
+    .item-description .cuisine-price,
+    .item-description .cuisine-cart {
+        width: 90px;
+    }
+    .item-description .cuisine-count-input {
+        width: 50px;
+    }
+}
+
+
+/*<div class="cuisine-content-item" id="american3">
+    <div class="content-item-img">
+        <img class="vertical" src="imgs\american\american11.jpg">
+    </div>
+    <div class="content-item-text">
+        <p><strong>american3</strong></p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa sequi, dignissimos ipsum molestiae veritatis.</p>
+        <form class="cuisine-price-cart">
+            <div class="cuisine-price">92 $</div>
+            <div class="cuisine-count">
+                <div class="minus noselect">-</div>
+                <input class="cuisine-count-input" type="text" value="1" pattern="[0-9]{0,3}">
+                <div class="plus noselect">+</div>
+            </div>
+            <input class="cuisine-cart" name="american3" type="submit" value="Add to cart">
+        </form>
+    </div>
+</div>*/

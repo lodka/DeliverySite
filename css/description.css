@@ -1,0 +1,53 @@
+.item-description-wrap {
+    top: 60px;
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.item-description {
+    background: white;
+    width: 360px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.description-close-button {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.description-close-button:hover {
+    background: #eeeeee;
+}
+
+.description-img-wrap {
+    display: inline-block;
+}
+
+.description-img {
+    max-width: 250px;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#item-description-desc {
+    padding: 0 50px;
+}
+
+#item-description-name,
+#item-description-info {
+    padding: 10px;
+}

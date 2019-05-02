@@ -1,0 +1,27 @@
+.map-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+#map {
+    height: 350px;
+    width: 650px;
+    border-radius: 20px;
+}
+
+.contacts-wrap {
+    width: 100%;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contacts-block {
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border: 1px solid rgb(216, 216, 216);
+    width: 225px;
+}

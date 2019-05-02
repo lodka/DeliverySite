@@ -1,0 +1,52 @@
+<div class="body-market-wrap">
+    <div class="body-market">
+        <div class="market-popular">
+            <h1>Clients choice</h1>
+            <div class="carousel-wrap">
+                <div class="carousel">
+                        $%TOP4
+                        $%TOP2
+                        $%TOP1
+                        $%TOP3
+                        $%TOP5
+                </div>
+            </div>
+        </div>
+        <hr></hr>
+        <div class="market-cuisine">
+            <h1>Our cuisine</h1>
+            <div class="cuisine-wrap">
+                <div class="cuisine">
+                    <div class="cuisine-item" id="ukrainian">
+                        <div class="cuisine-item-name">Ukrainian
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis aut, reiciendis assumenda voluptatibus ad eaque nemo tenetur recusandae consectetur quidem aliquid sed laudantium beatae, qui quo non nesciunt corrupti?
+                            </p>
+                        </div>
+                        <img src=".\imgs\ukrainian\ukrainian10.jpg" alt=""></img>
+                    </div>
+                    <div class="cuisine-item" id="asian">
+                        <div class="cuisine-item-name">Asian
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis aut, reiciendis assumenda voluptatibus ad eaque nemo tenetur recusandae consectetur quidem aliquid sed laudantium beatae, qui quo non nesciunt corrupti?
+                            </p>
+                        </div>
+                        <img src=".\imgs\asian\asian9.jpg" alt=""></img>
+                    </div>
+                    <div class="cuisine-item" id="european">
+                        <div class="cuisine-item-name">European
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis aut, reiciendis assumenda voluptatibus ad eaque nemo tenetur recusandae consectetur quidem aliquid sed laudantium beatae, qui quo non nesciunt corrupti?
+                            </p>
+                        </div>
+                        <img src=".\imgs\european\european21.jpg" alt=""></img>
+                    </div>
+                    <div class="cuisine-item" id="american">
+                        <div class="cuisine-item-name">American
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis aut, reiciendis assumenda voluptatibus ad eaque nemo tenetur recusandae consectetur quidem aliquid sed laudantium beatae, qui quo non nesciunt corrupti?
+                            </p>
+                        </div>
+                        <img src=".\imgs\american\american11.jpg" alt=""></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

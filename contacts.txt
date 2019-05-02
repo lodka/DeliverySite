@@ -1,0 +1,25 @@
+<div class="contacts-wrap"><h1>Contacts</h1>
+    <div class="contacts">
+        <div class="contacts-block">
+            <p>Phone numbers:</p>
+            <p>Vodafone: +38-XXX-XXX-XX-XX</p>
+            <p>Lifecell: +38-XXX-XXX-XX-XX</p>
+            <p>Kyivstar: +38-XXX-XXX-XX-XX</p>
+        </div>
+        <div class="contacts-block">
+            <p>Addresses:</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+        <div class="contacts-block">
+            <p>Emails:</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+    </div>
+    <div class="map-wrap">
+        <div id="map"></div>
+    </div>
+</div>

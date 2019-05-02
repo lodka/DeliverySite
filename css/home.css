@@ -1,0 +1,111 @@
+.body-market {
+    justify-self: center;
+    height: 100%;
+    padding: 0 40px;
+}
+
+.carousel-wrap {
+    display: flex;
+    justify-content: center;
+    height: 180px;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.carousel>[class^="carousel"] {
+    padding: 10px;
+}
+
+.carousel-4,
+.carousel-3,
+.carousel-2,
+.carousel-1 {
+    position: relative;
+}
+
+.carousel-4 {
+    width: 90px;
+    height: 90px;
+    font-size: 10px;
+}
+
+.carousel-4:hover {
+    width: 100px;
+    height: 100px;
+    font-size: 10px;
+}
+
+.carousel-3 {
+    width: 110px;
+    height: 110px;
+    font-size: 10px;
+}
+
+.carousel-3:hover {
+    width: 120px;
+    height: 120px;
+    font-size: 11px;
+}
+
+.carousel-2 {
+    width: 130px;
+    height: 130px;
+    font-size: 15px;
+}
+
+.carousel-2:hover {
+    width: 140px;
+    height: 140px;
+    font-size: 16px;
+}
+
+.carousel-1 {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+}
+
+.carousel-1:hover {
+    width: 160px;
+    height: 160px;
+    font-size: 21px;
+}
+
+.carousel-price {
+    position: absolute;
+    left: calc(50% - 10px);
+    bottom: 10px;
+}
+
+@media (max-width: 1280px) {
+    .body-market {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    .carousel-2:first-child,
+    .carousel-2:last-child {
+        display: none;
+    }
+    .carousel-2 {
+        width: 100px;
+        height: 100px;
+        font-size: 14px;
+    }
+    .body-market {
+        padding: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .carousel-2 {
+        width: 90px;
+        height: 90px;
+        font-size: 13px;
+    }
+}

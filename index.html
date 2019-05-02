@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="./css/core.css">
+    <link rel="stylesheet" href="./css/description.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/orders.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxl1HT2laBI1Mjr2uAKJQlZpP39Js83xw&callback=initMap"></script>
+    <script src="./js/core.js"></script>
+    <script src="./js/main.js"></script>
+
+    <title>DeliverySite</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="navbar-menu">
+                <div class="navbar-name"><a class="home white" href="#home">DeliverySite</a></div>
+                <div class="number">
+                    <div class="li-links">
+                        <a class="links white" href='tel:+380xxxxxxxxx'>+38-XXX-XXX-XX-XX</a>
+                    </div>
+                    <div class="li-verticals"></div>
+                    <div class="li-links">
+                        <a class="links white" href='tel:+380xxxxxxxxx'>+38-XXX-XXX-XX-XX</a>
+                    </div>
+                    <div class="li-verticals"></div>
+                    <div class="li-links">
+                        <a class="links white" href='tel:+380xxxxxxxxx'>+38-XXX-XXX-XX-XX</a>
+                    </div>
+                </div>
+                <div class="navbar-links-wrap">
+                    <ul class="navbar-links">
+                        <li class="li-links"><a class="links home white" href="#home">Home</a></li>
+                        <li class="li-verticals"></li>
+                        <li class="li-links" id="menu"><a class="links menu white" href="#menu">Menu</a></li>
+                        <li class="li-verticals"></li>
+                        <li class="li-links"><a class="links contacts white" href="#contacts">Contacts</a></li>
+                        <ul class="navbar-dropdown">
+                            <li class="dropdown-element border-bottom">Ukrainian</li>
+                            <li class="dropdown-element border-bottom">Asian</li>
+                            <li class="dropdown-element border-bottom">European</li>
+                            <li class="dropdown-element">American</li>
+                        </ul>
+                    </ul>
+
+                </div>
+                <div class="navbar-bars"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+    <div id="basket-button"><pre>  </pre><i class="fas fa-shopping-cart"></i>
+        <div class="orders-count"></div>
+    </div>
+    <div class="body-orders">
+        <div class="orders-wrap">
+            <div class="orders-name">
+                <h2>Basket</h2>
+                <hr>
+            </div>
+            <div id="orders-items">
+
+            </div>
+        </div>
+    </div>
+    <div class="body-wrap">
+
+    </div>
+    <div class="item-description-wrap">
+        <div class="item-description">
+            <div class="description-close-button noselect">X</div>
+            <h3 id="item-description-name"></h3>
+            <div class="description-img-wrap">
+                <div class="description-img">
+                    <img id="item-description-img" src="imgs\european\european15.jpg">
+                </div>
+            </div>
+            <p id="item-description-desc"></p>
+            <pre id="item-description-info"></pre>
+            <form class="cuisine-price-cart cart">
+                <div class="cuisine-price" id="desc-cuisine-price"></div>
+                <div class="cuisine-count">
+                    <div class="minus noselect">-</div>
+                    <input class="cuisine-count-input" type="text" value="1" pattern="[0-9]{0,3}" name="">
+                    <div class="plus noselect">+</div>
+                </div><input class="cuisine-cart" type="submit" value="Add to cart" id="desc-input"></form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
