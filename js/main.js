@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
         sessionStorage.categorie = 'ukrainian';
         loadData(sessionStorage.categorie, loadMenu);
     });
-    $('.contacts')[0].addEventListener('click', function() {
+    $('.contact')[0].addEventListener('click', function() {
         sessionStorage.position = "contacts";
         sessionStorage.categorie = '';
         loadPart(sessionStorage.position);
