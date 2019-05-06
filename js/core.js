@@ -195,9 +195,10 @@ function updateOrders() {
         $('.orders-count')[0].innerText = totalCount;
         let total = elem('p', 'bold');
         let buttonWrap = elem('div', 'orders-submit-wrap');
-        let button = elem('div', 'orders-submit bold');
+        let button = elem('button', 'orders-submit bold');
         let input = elem('input', 'orders-phone-number bold');
         let label = elem('label');
+        let form = elem('form');
         label.innerText = 'Your phone number:'
         input.setAttribute('type', 'tel');
         input.setAttribute('placeholder', '+380123456789');
@@ -205,9 +206,11 @@ function updateOrders() {
         buttonWrap.appendChild(button);
         total.innerText = 'Total items: ' + totalCount + '\n\nTotal price: ' + totalPrice + '$';
         $('#orders-items').appendChild(total);
-        $('#orders-items').appendChild(label);
-        $('#orders-items').appendChild(input);
-        $('#orders-items').appendChild(buttonWrap);
+
+        form.appendChild(label);
+        form.appendChild(input);
+        form.appendChild(buttonWrap);
+        $('#orders-items').appendChild(form);
         $('.orders-count')[0].style.display = 'inline-block';
     } else {
         let total = elem('p', 'bold');
