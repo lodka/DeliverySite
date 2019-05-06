@@ -87,7 +87,6 @@ h1 {
     display: flex;
     justify-content: flex-start;
     position: relative;
-    top: 60px;
 }
 
 .body-market-wrap {
@@ -119,4 +118,9 @@ h1 {
 .order-item-close,
 .navbar {
     transition: ease-out 0.2s;
+}
+
+.shift {
+    position: relative;
+    top: 60px;
 }

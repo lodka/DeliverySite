@@ -120,7 +120,7 @@ function loadMenu(categorie, data) {
 
             $('#cuisine-content').appendChild(cuisineContentWrap);
             loadEvents();
-            window.scrollTo(0, 325);
+            // window.scrollTo(0, 325);
         }
     }, 200);
 }
