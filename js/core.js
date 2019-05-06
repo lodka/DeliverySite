@@ -302,7 +302,9 @@ function replaceTop(response, top) {
                 'src="' + top[i].img +
                 '" alt=""></img></div><div class="price carousel-price">' +
                 top[i].price +
-                '$</div></div>');
+                '$</div><div class="price carousel-top">TOP ' +
+                (i + 1) +
+                '</div></div>');
         }
     } finally {
         return response;
