@@ -14,6 +14,7 @@
     height: 220px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .cuisine-item:hover>.cuisine-item-name {

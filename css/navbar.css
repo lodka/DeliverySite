@@ -15,6 +15,7 @@
     top: 10px;
     color: white;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .navbar-menu {
@@ -124,7 +125,7 @@
     flex-shrink: 0;
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1465px) {
     .number {
         font-size: 14px;
     }
@@ -136,7 +137,7 @@
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
     .number {
         display: none;
     }
