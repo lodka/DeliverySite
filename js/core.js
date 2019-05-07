@@ -242,7 +242,7 @@ function makeOrderCard(data) {
 }
 //Shows detailed info about product
 function loadDesc(id, data) {
-    let categories = (sessionStorage.categorie) ? [sessionStorage.categorie] : ['ukrainian', 'asian', 'european', 'american'];
+    let categories = ['ukrainian', 'asian', 'european', 'american'];
     let propagationFlag = false;
     categories.forEach(function(categorie) {
         for (let i = 0; i < data[categorie].length; ++i) {
@@ -252,7 +252,7 @@ function loadDesc(id, data) {
             if (data[categorie][i].name == id) {
                 $('#item-description-name').innerText = data[categorie][i].name;
                 $('#item-description-img').setAttribute('src', data[categorie][i].img);
-                data[categorie][i].vertical ? $('#item-description-img').className = "vertical" : {};
+                $('#item-description-img').className = "vertical";
                 $('#item-description-desc').innerText = data[categorie][i].desc;
                 let info = 'Info:\n';
                 data[categorie][i].info.forEach(function(elem) {
@@ -391,6 +391,7 @@ function loadEvents(groups) {
                 Array.prototype.forEach.call($('.order-item'), function(element) {
                     element.addEventListener('click', function(e) {
                         loadData(e.currentTarget.id, loadDesc);
+                        e.stopImmediatePropagation();
                     });
                 });
             if ($('.order-item-close'))
