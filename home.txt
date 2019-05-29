@@ -19,7 +19,7 @@
                 <div class="cuisine">
                     <div class="cuisine-item" id="ukrainian">
                         <div class="cuisine-item-name">Ukrainian
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis aut, reiciendis assumenda voluptatibus ad eaque nemo tenetur recusandae consectetur quidem aliquid sed laudantium beatae, qui quo non nesciunt corrupti?
+                            <p>Lorem ipsum dolor sit amet consectedur adipisicing elit. Illum perferendis aut, reiciendis assumenda voluptatibus ad eaque nemo tenetur recusandae consectetur quidem aliquid sed laudantium beatae, qui quo non nesciunt corrupti?
                             </p>
                         </div>
                         <img src=".\imgs\ukrainian\ukrainian10.jpg" alt=""></img>
